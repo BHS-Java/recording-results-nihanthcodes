@@ -1,3 +1,5 @@
+package gamecode;
+
 public interface Spec {
     public String   askString(String question);
     public int      askNumber(String question);
