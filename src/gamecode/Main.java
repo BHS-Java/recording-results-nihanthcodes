@@ -14,7 +14,7 @@ public class Main implements Spec{
     }
 
     public Results getResults(Game guessingOrBetter){
-        return new GameResults();
+        return new GameResults("test");
     }
 
     public Person makePerson(String name){

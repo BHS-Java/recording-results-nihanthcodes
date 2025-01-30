@@ -33,6 +33,6 @@ public class Player implements Person {
     };
 
     public Results getResults(){
-        return new GameResults();
+        return new GameResults("test");
     }; 
 }
