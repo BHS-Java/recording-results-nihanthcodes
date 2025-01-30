@@ -32,7 +32,13 @@ public class Player implements Person {
         return this.age;
     };
 
-    public Results getResults(){
-        return new GameResults("test");
+    public GameResults getResults(){
+        try{
+            return new GameResults(name);
+        } catch (FileNotFoundException e){
+            System.out.println("file not found exception");
+            return new GameResults();
+        }
+        
     }; 
 }

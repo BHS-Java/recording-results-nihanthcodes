@@ -1,4 +1,5 @@
 package gamecode;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main implements Spec{
@@ -10,6 +11,10 @@ public class Main implements Spec{
         int gradeLevel = mainInstance.askNumber("what grade r u in: ");
 
         Player player1 = new Player(name, height, gradeLevel);
+        GameResults results1 = player1.getResults();
+
+        System.out.println(results1.getResultsData().toString());
+
 
     }
 
@@ -28,7 +33,12 @@ public class Main implements Spec{
     }
 
     public Results getResults(Game guessingOrBetter){
-        return new GameResults("test");
+        try{
+            return new GameResults("test");
+        } catch (FileNotFoundException e){
+            System.out.println(e);
+            return new GameResults();
+        }
     }
 
     public Person makePerson(String name){
