@@ -2,20 +2,19 @@ package gamecode;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+
 public class Main implements Spec{
     public static void main(String[] args) {
         Main mainInstance = new Main(); 
         String name = mainInstance.askString("whats ur name: ");
-
+    
         int height = mainInstance.askNumber("what height r u: ");
         int gradeLevel = mainInstance.askNumber("what grade r u in: ");
-
+    
         Player player1 = new Player(name, height, gradeLevel);
         GameResults results1 = player1.getResults();
-
+                   
         System.out.println(results1.getResultsData().toString());
-
-
     }
 
     public int askNumber(String question){
