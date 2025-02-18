@@ -12,6 +12,9 @@ public class Main implements Spec{
         int gradeLevel = mainInstance.askNumber("what grade r u in: ");
     
         Player player1 = new Player(name, height, gradeLevel);
+
+        player1.climb(5);
+
         PlayerResults results1 = player1.getResults();
 
         Game game1 = new Game(player1);

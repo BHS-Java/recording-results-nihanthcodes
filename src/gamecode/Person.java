@@ -6,4 +6,5 @@ public interface Person {
     public int      getHeight();
     public int      getAge();
     public Results  getResults(); 
+    public void climb(int stairCount);
 }
