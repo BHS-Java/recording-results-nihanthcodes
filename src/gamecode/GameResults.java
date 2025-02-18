@@ -2,6 +2,7 @@ package gamecode;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
@@ -29,7 +30,13 @@ public class GameResults {
     public String getResults(){
         return data.toString();
     }
+
+    public ArrayList<String> getAllPlayers() {
+        HashSet<String> uniquePlayers = new HashSet<>();
+        for (HashMap<String, String> entry : data) {
+            uniquePlayers.add(entry.get("playerName"));
+        }
+        return new ArrayList<>(uniquePlayers);
+    }
     
-
-
 }

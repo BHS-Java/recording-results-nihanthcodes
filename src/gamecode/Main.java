@@ -18,6 +18,9 @@ public class Main implements Spec{
         PlayerResults results1 = player1.getResults();
 
         Game game1 = new Game(player1);
+        System.out.print("all players: ");           
+        System.out.println(game1.loadPlayers().toString());
+
         System.out.println(game1.getResults());           
 
         System.out.println(results1.getResultsData().toString());
