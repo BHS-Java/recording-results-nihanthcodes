@@ -9,19 +9,15 @@ import java.io.FileNotFoundException;
 
 public class PlayerResults implements Results{
     private String playerName;
-    private File resultsFile = new File("C:\\Users\\2015567\\github-classroom\\BHS-Java\\recording-results-nihanthcodes\\src\\gamecode\\results.csv");
+    private File resultsFile = new File("src\\gamecode\\results.csv");
     private ArrayList<HashMap> data = new ArrayList();
     
     public PlayerResults(String playerName) throws FileNotFoundException{
         super();
-        System.out.println("asdf1");
-        System.out.println(resultsFile);
         Scanner fileScanner = new Scanner(this.resultsFile);
-        System.out.println("asdf");
         while (fileScanner.hasNextLine()) {
             String line = fileScanner.nextLine();
             String[] fields = line.split(","); 
-            System.out.println(fields);
             if (!fields[2].equals("result")){
                 if (fields[1].equals(playerName)){
                     HashMap temp = new HashMap();

@@ -11,10 +11,7 @@ public class Player implements Person {
     private int age;
     String DIRECTION = "";
     ArrayList<String> directions = new ArrayList<String>();
-    directions.add("right-up");
-    directions.add("left-up");
-    directions.add("right-down");
-    directions.add("left-down");
+
 
 
     public Player(String name, int height, int age){
@@ -22,6 +19,10 @@ public class Player implements Person {
         this.height = height;
         this.age = age;
         this.DIRECTION = "right-up";
+        directions.add("right-up");
+        directions.add("left-up");
+        directions.add("right-down");
+        directions.add("left-down");
     }
 
     public void setName(String newName){
@@ -47,30 +48,31 @@ public class Player implements Person {
             stair = "_|";
         }
 
-
         String allStairs = "";
 
         if (stair.equals("_|")){
             for (int i=stairCount; i>0; i--){
                 for (int j=2*(i-1); j>0; j--){
-                    allStairs.add(" ")
+                    allStairs = allStairs.concat(" ");
                 }
-                allStairs.add("_|")
-                allStairs.add("\n")
+                allStairs = allStairs.concat("_|");
+                allStairs = allStairs.concat("\n");
             } 
         }    
 
+
         if (stair.equals("|_")){
             for (int i=0; i<stairCount; i++){
-                allStairs.add("|_")
+                allStairs = allStairs.concat("|_");
                 for (int j=0; j<i*2; j++){
-                    allStairs.add(" ")
+                    allStairs = allStairs.concat(" ");
                 }
-                allStairs.add("\n")
+                allStairs = allStairs.concat("\n");
             } 
         }    
         
-        System.out.println(allStairs);
+        System.out.println("allStairs: ");
+        System.out.print(allStairs);
 
     }
 

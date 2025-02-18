@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 
 public class GameResults {
     private String playerName;
-    private File resultsFile = new File("C:\\Users\\2015567\\github-classroom\\BHS-Java\\recording-results-nihanthcodes\\src\\gamecode\\results.csv");
+    private File resultsFile = new File("src\\gamecode\\results.csv");
     private ArrayList<HashMap> data = new ArrayList();
 
     public GameResults() throws FileNotFoundException{

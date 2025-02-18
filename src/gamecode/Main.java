@@ -20,7 +20,6 @@ public class Main implements Spec{
         Game game1 = new Game(player1);
         System.out.println(game1.getResults());           
 
-
         System.out.println(results1.getResultsData().toString());
     }
 
